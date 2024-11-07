@@ -1,0 +1,8 @@
+REM make link for scripts for file patching and debugging
+mklink /J "C:\Program Files (x86)\Steam\steamapps\common\DayZ\scripts" "P:\scripts"
+
+REM make link for your mod for file patching and debugging
+mklink /J "C:\Program Files (x86)\Steam\steamapps\common\DayZ\IVB" "P:\IVB"
+
+REM run workbench with mod linked for filepatching and debgging
+start /D "C:\Program Files (x86)\Steam\steamapps\common\DayZ Tools\Bin\Workbench" workbenchApp.exe "-mod=P:\IVB"
