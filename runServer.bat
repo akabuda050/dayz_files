@@ -5,7 +5,6 @@ taskkill /im DayZServer_x64.exe /F
 set serverName=IdlePoint PVP/PVE
 set serverPath=C:\Program Files (x86)\Steam\steamapps\common\DayZServer
 set serverPort=2302
-set serverConfig=config.cfg
 set serverCPU=2
 
 title %serverName% batch
@@ -36,4 +35,4 @@ del "%profileFolder%\*.mdmp"
 
 timeout 60
 
-start "DayZ Server" /D "%serverPath%" DayZServer_x64.exe "-mod=%mods%" "-mission=%missionPath%" "-profiles=%profileFolder%" -config=%serverConfig% -port=%serverPort% -cpuCount=%serverCPU% -dologs -adminlog -netlog -freezecheck
+start "DayZ Server" /D "%serverPath%" DayZServer_x64.exe "-mod=%mods%" "-mission=%missionPath%" "-config=%configPath%" "-profiles=%profileFolder%" -port=%serverPort% -cpuCount=%serverCPU% -dologs -adminlog -netlog -freezecheck
